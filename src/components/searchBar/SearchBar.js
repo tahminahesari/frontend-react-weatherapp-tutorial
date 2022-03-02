@@ -1,26 +1,29 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
+// Added state variable location to App.js
+// Passed state-setter-function as callback prop to SearchBar in App.js
+
 function SearchBar({ setLocationHandler }) {
   const [query, setQuery] = useState("");
 
-  // wat zorgt er (e) hier voor? 6.5 callback props
   function onFormSubmit(e) {
     e.preventDefault();
-    setLocationHandler(query);
     console.log("submitted!");
+
+    setLocationHandler(query);
   }
 
   return (
-    <form className="searchbar">
+    <form className="searchbar" onSubmit={onFormSubmit}>
       <input
         type="text"
         name="search"
         value={query}
-        // waar halt hij e.target.value ?
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Zoek een stad in Nederland"
       />
+
       <button type="submit">Zoek</button>
     </form>
   );
