@@ -5,10 +5,10 @@ function SearchBar({ setLocationHandler }) {
   const [query, setQuery] = useState("");
 
   // wat zorgt er (e) hier voor? 6.5 callback props
-  function OnFormSubmit(e) {
+  function onFormSubmit(e) {
     e.preventDefault();
     setLocationHandler(query);
-    console.log("Submitted!");
+    console.log("submitted!");
   }
 
   return (

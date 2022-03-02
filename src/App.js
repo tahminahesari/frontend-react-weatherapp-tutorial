@@ -12,7 +12,6 @@ function App() {
   const [weatherData, setWeatherData] = useState({});
   const [location, setLocation] = useState("");
 
-  // Een callback functie (met de code die uitgevoerd wordt)
   useEffect(() => {
     // 1. we definieren de functie
     async function fetchData() {
@@ -62,7 +61,7 @@ function App() {
           <TabBarMenu />
 
           <div className="tab-wrapper">
-            <ForecastTab />
+            <ForecastTab coordinates={weatherData.coord} />
           </div>
         </div>
 
