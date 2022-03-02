@@ -38,9 +38,7 @@ function ForecastTab({ coordinates }) {
             <article className="forecast-day" key={day.dt}>
               <p className="day-description">{createDateString(day.dt)}</p>
               <section className="forecast-weather">
-                <span>12&deg; C</span>
-                {day.temp.day}
-
+                <span>{day.temp.day}</span>
                 <span className="weather-description">
                   {day.weather[0].description}
                 </span>
