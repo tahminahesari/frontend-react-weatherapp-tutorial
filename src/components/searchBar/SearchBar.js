@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
-// Added state variable location to App.js
-// Passed state-setter-function as callback prop to SearchBar in App.js
-
 function SearchBar({ setLocationHandler }) {
   const [query, setQuery] = useState("");
 

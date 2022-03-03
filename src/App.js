@@ -34,7 +34,7 @@ function App() {
 
     // code wordt alleen afgevuurd als location veranderd
   }, [location]);
-
+  console.log("weatherData", weatherData);
   return (
     <>
       <div className="weather-container">
